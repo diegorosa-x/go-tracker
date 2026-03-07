@@ -7,9 +7,10 @@ import {
   Wallet,
   UserCheck,
   BellRing,
-  Search,
   Play,
   Smartphone,
+  Shield,
+  MapPin,
 } from "lucide-react";
 import Button from "../ui/Button";
 
@@ -103,37 +104,64 @@ const ModernFeatures = () => {
 
           {/* CENTER PHONE */}
           <div className="flex-1 flex flex-col items-center relative py-10">
-            {/* Glow behind phone */}
-            <div className="absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]" />
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="relative z-10 w-[280px] md:w-[320px]"
-            >
-              <div className="relative rounded-[3rem] border-[10px] border-zinc-900 dark:border-zinc-800 bg-zinc-950 overflow-hidden shadow-[0_0_50px_rgba(245,130,32,0.2)]">
-                <img
-                  src="public\assets\img\tracking.png"
-                  alt="GoTracker App Map"
-                  className="w-full h-125 md:h-150 opacity-90"
-                />
+            <div className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px] rounded-[3rem] border-[8px] border-zinc-800 bg-white overflow-hidden shadow-2xl shadow-secondary/20">
 
-                {/* App UI */}
-                <div className="absolute top-12 left-6 right-6 flex justify-between items-center">
-                  <div className="glass px-3 py-1 rounded-full text-[10px] font-bold text-primary flex items-center gap-1">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
-                    ONLINE
+              <img
+                src="/assets/img/tracking.png"
+                alt="App Mockup"
+                className="w-full aspect-[9/19] object-cover opacity-90"
+              />
+
+              <div className="absolute inset-0 from-white via-transparent to-transparent" />
+
+              {/* FLOATING CARD 1 */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute top-1/4 -right-4 sm:-right-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-secondary/10"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <Shield className="text-emerald-500 w-5 h-5" />
                   </div>
 
-                  <div className="w-8 h-8 rounded-full glass flex items-center justify-center">
-                    <Search className="w-4 h-4 text-white" />
+                  <div>
+                    <p className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">
+                      Status
+                    </p>
+                    <p className="text-sm font-bold text-secondary">
+                      Veículo Protegido
+                    </p>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* FLOATING CARD 2 */}
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+                className="absolute bottom-1/4 -left-4 sm:-left-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-primary/10"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <MapPin className="text-primary w-5 h-5" />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">
+                      Localização
+                    </p>
+                    <p className="text-sm font-bold text-secondary">
+                      Hortolândia, SP
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
             {/* APP STORES */}
-            <div className="mt-12 flex items-center gap-4">
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-4">
               <div className="bg-black text-white px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3">
                 <Play className="w-6 h-6 fill-white" />
                 <div className="text-left">
@@ -163,7 +191,7 @@ const ModernFeatures = () => {
                 rel="noopener noreferrer"
               >
                 <Button variant="primary" size="lg" glow className="px-8 py-4">
-                  Testar sistema agora
+                  Testar agora
                 </Button>
               </a>
 
