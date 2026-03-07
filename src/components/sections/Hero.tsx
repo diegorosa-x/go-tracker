@@ -97,11 +97,11 @@ const Hero = () => {
 
             <div className="relative z-10 mx-auto w-[260px] sm:w-[300px] lg:max-w-[320px]">
               {/* PHONE MOCKUP */}
-              <div className="relative rounded-[3rem] border-[8px] border-zinc-800 bg-white overflow-hidden shadow-2xl shadow-secondary/20">
+              <div className="relative w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px] rounded-[3rem] border-[8px] border-zinc-800 bg-white overflow-hidden shadow-2xl shadow-secondary/20">
                 <img
                   src="/assets/img/tracking.png"
                   alt="App Mockup"
-                  className="w-full h-[480px] sm:h-[520px] md:h-[600px] object-cover opacity-90"
+                  className="w-full aspect-[9/19] object-cover opacity-90"
                 />
 
                 <div className="absolute inset-0 from-white via-transparent to-transparent" />
@@ -110,7 +110,7 @@ const Hero = () => {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute top-1/4 -right-6 sm:-right-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-secondary/10"
+                  className="absolute top-1/4 -right-4 sm:-right-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-secondary/10"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
@@ -132,7 +132,7 @@ const Hero = () => {
                 <motion.div
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-                  className="absolute bottom-1/4 -left-6 sm:-left-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-primary/10"
+                  className="absolute bottom-1/4 -left-4 sm:-left-8 glass p-3 sm:p-4 rounded-2xl shadow-xl border-primary/10"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
