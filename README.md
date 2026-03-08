@@ -181,22 +181,11 @@ npm run dev
 
 ---
 
-# 📷 Demonstração
+## 🖥 Demonstração
 
-Em breve será disponibilizada uma demonstração do sistema.
+Acesse a demonstração do sistema:
 
----
-
-# 🤝 Contribuição
-
-Contribuições são bem-vindas.
-
-Para contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma branch
-3. Faça suas alterações
-4. Envie um Pull Request
+👉 [Ver Demo Online](https://go-tracker-one.vercel.app/)
 
 ---
 
@@ -212,8 +201,4 @@ Este projeto está sob licença privada.
 
 Desenvolvedor do projeto **Go Tracker**.
 
----
 
-# ⭐ Suporte
-
-Se este projeto for útil para você, considere dar uma ⭐ no repositório.
