@@ -122,7 +122,7 @@ export const LightFleets = () => {
 
               <div className="mt-16">
                 <a
-                  href="https://wa.me/5519995778009?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20demo%20para%20rastreamento%20e%20telemetria%20de%20frotas%20leves."
+                  href="https://wa.me/19920011550?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20demo%20para%20rastreamento%20e%20telemetria%20de%20frotas%20leves."
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Solicitar demonstração pelo WhatsApp"
