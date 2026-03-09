@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ChevronRight,
   Map,
@@ -7,31 +7,37 @@ import {
   Gauge,
   Fuel,
   MapPin,
-} from 'lucide-react';
-import { motion } from 'motion/react';
+} from "lucide-react";
+import { motion } from "motion/react";
 
 const features = [
   {
-    title: 'Geofencing inteligente',
+    title: "Geofencing inteligente",
     description:
-      'Crie perímetros virtuais e receba alertas instantâneos de entrada e saída dos veículos.',
+      "Crie perímetros virtuais e receba alertas instantâneos de entrada e saída dos veículos.",
     icon: Map,
   },
   {
-    title: 'Imobilização remota',
+    title: "Imobilização remota",
     description:
-      'Aumente a segurança da frota com bloqueio de ignição remoto em situações suspeitas.',
+      "Aumente a segurança da frota com bloqueio de ignição remoto em situações suspeitas.",
     icon: Lock,
   },
   {
-    title: 'Análise de ociosidade',
+    title: "Análise de ociosidade",
     description:
-      'Descubra quanto tempo os veículos permanecem ligados sem movimento e reduza desperdícios.',
+      "Descubra quanto tempo os veículos permanecem ligados sem movimento e reduza desperdícios.",
     icon: BarChart3,
   },
 ];
 
-const vehicleTypes = ['Sprinter', 'Fiorino', 'Vans', 'Furgões', 'Carros de passeio'];
+const vehicleTypes = [
+  "Sprinter",
+  "Fiorino",
+  "Vans",
+  "Furgões",
+  "Carros de passeio",
+];
 
 export const LightFleets = () => {
   return (
@@ -62,21 +68,17 @@ export const LightFleets = () => {
                   Monitoramento em tempo real
                 </div>
 
-                <h2
-                  id="light-fleets-title"
-                  className="mb-10 text-5xl font-black leading-[0.9] tracking-tight md:text-7xl"
-                >
-                  Controle inteligente para
-                  <span className="block text-gotracker-orange">
-                    frotas leves e utilitários
-                  </span>
+                <h2 className="text-6xl md:text-8xl font-black mb-10 leading-[0.85] tracking-tighter italic">
+                  Controle <br />
+                  <span className="text-gotracker-orange">Absoluto</span>
                 </h2>
 
                 <p className="mb-8 text-xl font-medium leading-relaxed text-slate-300">
-                  Vá além do rastreamento veicular. Tenha mais controle operacional
-                  com telemetria avançada para veículos leves, utilitários e vans,
-                  como Sprinter, Fiorino e furgões, reduzindo custos, aumentando a
-                  segurança e prolongando a vida útil da frota.
+                  Vá além do rastreamento veicular. Tenha mais controle
+                  operacional com telemetria avançada para veículos leves,
+                  utilitários e vans, como Sprinter, Fiorino e furgões,
+                  reduzindo custos, aumentando a segurança e prolongando a vida
+                  útil da frota.
                 </p>
               </header>
 
@@ -127,7 +129,11 @@ export const LightFleets = () => {
                   className="inline-flex items-center gap-4 rounded-2xl bg-gotracker-orange px-12 py-6 text-sm font-black uppercase tracking-widest text-white shadow-[0_20px_50px_rgba(249,115,22,0.4)] transition-all hover:scale-105 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-gotracker-orange focus:ring-offset-2 focus:ring-offset-slate-950"
                 >
                   Solicitar demo
-                  <ChevronRight size={20} aria-hidden="true" focusable="false" />
+                  <ChevronRight
+                    size={20}
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                 </a>
               </div>
             </motion.div>
@@ -170,7 +176,10 @@ export const LightFleets = () => {
                     </span>
                   </div>
                   <p className="tabular-nums text-4xl font-black text-white">
-                    112 <span className="text-sm font-bold text-white/40">km/h</span>
+                    112{" "}
+                    <span className="text-sm font-bold text-white/40">
+                      km/h
+                    </span>
                   </p>
                 </motion.div>
 
@@ -188,19 +197,25 @@ export const LightFleets = () => {
                     </span>
                   </div>
                   <p className="tabular-nums text-4xl font-black text-white">
-                    74 <span className="text-sm font-bold text-white/60">%</span>
+                    74{" "}
+                    <span className="text-sm font-bold text-white/60">%</span>
                   </p>
                 </motion.div>
               </div>
 
               <figcaption id="light-fleets-image-caption" className="sr-only">
-                Exemplo visual de monitoramento de veículos leves com telemetria,
-                indicadores operacionais e rastreamento em tempo real.
+                Exemplo visual de monitoramento de veículos leves com
+                telemetria, indicadores operacionais e rastreamento em tempo
+                real.
               </figcaption>
 
               <motion.aside
                 animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute -right-12 -top-12 hidden rounded-3xl bg-white p-6 shadow-[0_40px_80px_rgba(0,0,0,0.4)] xl:block"
                 aria-label="Última posição registrada do veículo"
               >
@@ -215,7 +230,9 @@ export const LightFleets = () => {
                     <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">
                       Última posição
                     </p>
-                    <p className="font-black text-gotracker-blue">São Luís, MA</p>
+                    <p className="font-black text-gotracker-blue">
+                      São Luís, MA
+                    </p>
                   </div>
                 </div>
                 <div className="relative h-24 w-40 overflow-hidden rounded-xl bg-slate-100">
@@ -238,7 +255,9 @@ export const LightFleets = () => {
                   <p className="mb-1 text-[10px] font-black uppercase tracking-widest text-white/40">
                     Economia
                   </p>
-                  <p className="text-2xl font-black text-gotracker-orange">+22%</p>
+                  <p className="text-2xl font-black text-gotracker-orange">
+                    +22%
+                  </p>
                 </div>
                 <div aria-hidden="true" className="h-8 w-px bg-white/10" />
                 <div className="text-center">
