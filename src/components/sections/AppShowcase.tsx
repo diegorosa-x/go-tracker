@@ -1,19 +1,24 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React from "react";
+import { motion } from "motion/react";
 
 export const AppShowcase = () => (
-  <section className="py-24 bg-zinc-50 relative overflow-hidden z-10" id="quem-somos">
-    {/* Grid Background Pattern */}
-    <div 
-      className="absolute inset-0 opacity-[0.1]" 
-      style={{ 
-        backgroundImage: `linear-gradient(#2B3990 1px, transparent 1px), linear-gradient(90deg, #2B3990 1px, transparent 1px)`,
-        backgroundSize: '50px 50px'
+  <section
+    id="quem-somos"
+    aria-labelledby="app-showcase-title"
+    className="relative z-10 overflow-hidden bg-zinc-50 py-24"
+  >
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 opacity-[0.1]"
+      style={{
+        backgroundImage:
+          "linear-gradient(#2B3990 1px, transparent 1px), linear-gradient(90deg, #2B3990 1px, transparent 1px)",
+        backgroundSize: "50px 50px",
       }}
-    ></div>
+    />
 
-    <div className="max-w-7xl mx-auto px-4 relative z-10">
-      <div className="flex flex-col lg:flex-row items-center gap-16">
+    <div className="relative z-10 mx-auto max-w-7xl px-4">
+      <div className="flex flex-col items-center gap-16 lg:flex-row">
         <div className="lg:w-1/2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -21,78 +26,110 @@ export const AppShowcase = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-black text-[#2B3990] mb-8 leading-tight">
-              "Sistema de Monitoramento <br />
-              Exclusivo em Todo o Brasil"
-            </h2>
-            
-            <div className="space-y-6 text-zinc-600 leading-relaxed max-w-xl text-lg">
-              <p>
-                Fundada com a necessidade de oferecer uma opção de rastreamento veicular com qualidade avançada e preço justo. A GoTracker é especialista em rastreamento e telemetria, com atendimento para veículos de passeio e frotas de empresas em todo o território nacional.
-              </p>
-              <p>
-                Nosso serviço é realizado com equipamentos homologados pela Anatel, além de fornecer um sistema de monitoramento exclusivo, acessível via web ou aplicativo para Android e iOS.
-              </p>
-            </div>
+            <header>
+              <h2
+                id="app-showcase-title"
+                className="mb-8 text-2xl font-black leading-tight text-[#2B3990] md:text-5xl"
+              >
+                Sistema de monitoramento veicular exclusivo em todo o Brasil
+              </h2>
 
-            <div className="flex flex-wrap gap-4 mt-12">
-              <a href="#" className="hover:scale-105 transition-transform">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-                  alt="Get it on Google Play" 
+              <div className="max-w-xl space-y-6 text-lg leading-relaxed text-zinc-700">
+                <p>
+                  A GoTracker nasceu para oferecer rastreamento veicular com
+                  tecnologia avançada, preço justo e atendimento de qualidade.
+                  Somos especialistas em rastreamento e telemetria para veículos
+                  de passeio, utilitários e frotas empresariais em todo o
+                  território nacional.
+                </p>
+
+                <p>
+                  Trabalhamos com equipamentos homologados pela Anatel e um
+                  sistema exclusivo de monitoramento, acessível via web e
+                  aplicativo para Android e iOS, para dar mais controle,
+                  segurança e eficiência à sua operação.
+                </p>
+              </div>
+            </header>
+
+            <nav
+              aria-label="Links para download do aplicativo"
+              className="mt-12 flex flex-wrap gap-4"
+            >
+              <a
+                href="https://play.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-105"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Baixar aplicativo no Google Play"
                   className="h-14"
-                  referrerPolicy="no-referrer"
                 />
               </a>
-              <a href="#" className="hover:scale-105 transition-transform">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" 
-                  alt="Download on the App Store" 
+
+              <a
+                href="https://www.apple.com/app-store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:scale-105"
+              >
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Baixar aplicativo na App Store"
                   className="h-14"
-                  referrerPolicy="no-referrer"
                 />
               </a>
-            </div>
+            </nav>
           </motion.div>
         </div>
 
-        <div className="lg:w-1/2 relative flex justify-center items-center">
-          {/* Decorative Elements from the image */}
-          <div className="absolute top-20 left-10 w-10 h-10 bg-[#F7941E] rounded-full shadow-xl flex items-center justify-center border-4 border-white z-20">
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-          </div>
-          <div className="absolute bottom-20 right-10 w-12 h-12 bg-[#2B3990] rounded-full shadow-xl flex items-center justify-center border-4 border-white z-20">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
+        <div className="relative flex items-center justify-center lg:w-1/2">
+          <div
+            aria-hidden="true"
+            className="absolute left-10 top-20 z-20 flex h-10 w-10 items-center justify-center rounded-full border-4 border-white bg-[#F7941E] shadow-xl"
+          >
+            <div className="h-2 w-2 rounded-full bg-white" />
           </div>
 
-          {/* Smartphone Mockup */}
-          <motion.div
+          <div
+            aria-hidden="true"
+            className="absolute bottom-20 right-10 z-20 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-[#2B3990] shadow-xl"
+          >
+            <div className="h-3 w-3 rounded-full bg-white" />
+          </div>
+
+          <motion.figure
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, type: "spring" }}
             className="relative z-10"
+            aria-labelledby="app-mockup-caption"
           >
-            <div className="w-[300px] h-[620px] bg-[#1a1c2c] rounded-[3.5rem] border-[10px] border-[#1a1c2c] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden relative">
-              {/* Screen Content */}
-              <div className="w-full h-full bg-[#eef2f7] flex flex-col items-center justify-center p-8 relative">
-                {/* App Logo/Button in the middle */}
-                <div className="w-24 h-24 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center mb-4 border border-zinc-100">
-                  <span className="text-[#2B3990] font-black text-3xl tracking-tighter">GO</span>
-                </div>
-                
-                {/* Placeholder UI elements */}
-                <div className="w-full space-y-4 mt-8">
-                  <div className="h-3 bg-zinc-200 rounded-full w-3/4 mx-auto"></div>
-                  <div className="h-3 bg-zinc-200 rounded-full w-1/2 mx-auto"></div>
-                  <div className="h-3 bg-zinc-200 rounded-full w-2/3 mx-auto"></div>
-                </div>
+            <div className="relative h-[620px] w-[300px] overflow-hidden rounded-[3.5rem] border-[10px] border-[#1a1c2c] bg-[#1a1c2c] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
+              <div className="relative h-full w-full overflow-hidden bg-[#eef2f7]">
+                <img
+                  src="/assets/img/phone-bg.jpeg"
+                  alt="Tela do aplicativo GoTracker exibida no mockup do celular"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-                {/* Bottom Bar */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-1/3 h-1.5 bg-zinc-300 rounded-full"></div>
+                <div
+                  aria-hidden="true"
+                  className="absolute bottom-8 left-1/2 h-1.5 w-1/3 -translate-x-1/2 rounded-full bg-white/70 backdrop-blur-sm"
+                />
               </div>
             </div>
-          </motion.div>
+
+            <figcaption id="app-mockup-caption" className="sr-only">
+              Exemplo visual do aplicativo de monitoramento veicular da
+              GoTracker, disponível para acesso via web, Android e iOS.
+            </figcaption>
+          </motion.figure>
         </div>
       </div>
     </div>
