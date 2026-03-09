@@ -6,10 +6,10 @@ export const TopBar = () => (
     <div className="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium">
       <div className="flex gap-6">
         <a href="mailto:contato@gotracker.com.br" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
-          <Mail size={14} /> contato@gotracker.com.br
+          <Mail size={14} /> Evertonmudo@hotmail.com
         </a>
         <a href="tel:0800000000" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
-          <Phone size={14} /> (98) 99107-0105
+          <Phone size={14} /> (19) 920011550
         </a>
       </div>
       <div className="flex gap-4 items-center">
