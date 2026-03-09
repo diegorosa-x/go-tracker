@@ -15,8 +15,11 @@ const navLinkClass =
 const homeLinkClass =
   "text-[#2B3990] font-bold text-sm uppercase hover:text-[#F7941E] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2 rounded-sm";
 
-const clientAreaClass =
-  "bg-[#2B3990] text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-[#1e2866] transition-all shadow-md inline-flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2";
+const clientAreaDesktopClass =
+  "bg-[#2B3990] text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-[#1e2866] transition-all shadow-md inline-flex items-center gap-2 whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2";
+
+const clientAreaMobileClass =
+  "lg:hidden bg-[#2B3990] text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wide hover:bg-[#1e2866] transition-all shadow-md inline-flex items-center whitespace-nowrap shrink-0 max-w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2";
 
 export const Header = ({
   scrolled,
@@ -37,19 +40,36 @@ export const Header = ({
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between gap-4">
-            <Link
-              to="/"
-              className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2 rounded-md"
-              onClick={closeMenu}
-              aria-label="Ir para a página inicial da Go Tracker"
-            >
-              <img
-                src="/assets/img/logo.png"
-                alt="Go Tracker - Rastreamento Veicular"
-                className="h-16 w-auto md:h-20"
-              />
-            </Link>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center min-w-0 gap-2 sm:gap-3">
+              <Link
+                to="/"
+                className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2 rounded-md"
+                onClick={closeMenu}
+                aria-label="Ir para a página inicial da Go Tracker"
+              >
+                <img
+                  src="/assets/img/logo.png"
+                  alt="Go Tracker - Rastreamento Veicular"
+                  className="h-14 w-auto sm:h-16 md:h-20"
+                />
+              </Link>
+
+              <a
+                href="https://gotracker.seeflex.com.br/users/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={clientAreaMobileClass}
+                aria-label="Abrir Área do Cliente em uma nova aba"
+              >
+                <User
+                  size={16}
+                  aria-hidden="true"
+                  className="hidden xs:block sm:block"
+                />
+                <span className="truncate">Área do Cliente</span>
+              </a>
+            </div>
 
             <nav
               className="hidden lg:flex items-center gap-8"
@@ -79,17 +99,17 @@ export const Header = ({
                 href="https://gotracker.seeflex.com.br/users/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={clientAreaClass}
+                className={clientAreaDesktopClass}
                 aria-label="Abrir Área do Cliente em uma nova aba"
               >
                 <User size={16} aria-hidden="true" />
-                <span>Área do Cliente</span>
+                <span>Area do Cliente</span>
               </a>
             </nav>
 
             <button
               type="button"
-              className="lg:hidden text-[#2B3990] p-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2"
+              className="lg:hidden text-[#2B3990] p-2 rounded-md shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2"
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
@@ -169,7 +189,7 @@ export const Header = ({
                 aria-label="Abrir Área do Cliente em uma nova aba"
               >
                 <User size={18} aria-hidden="true" />
-                <span>Área do Cliente</span>
+                <span>Area do Cliente</span>
               </a>
 
               <button
