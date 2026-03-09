@@ -65,7 +65,7 @@ export const WhyInvest = () => (
             size="md"
             title={
               <>
-                Por que investir em{" "}
+                Por que investir em <br></br>
                 <span className="text-[#f0ac58]">Rastreamento veicular ?</span>
                 
               </>
