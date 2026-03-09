@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => (
   <footer
@@ -15,14 +16,17 @@ export const Footer = () => (
         {/* Brand */}
         <section aria-label="Informações da empresa">
           <div className="mb-8 flex flex-col">
-            <span className="flex items-center text-3xl font-black leading-none tracking-tighter">
-              <span className="text-white">GO</span>
-              <span className="ml-1 text-[#F7941E]">TRACKER</span>
-            </span>
-
-            <span className="mt-1 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-              Rastreamento veicular
-            </span>
+           <Link
+                to="/"
+                className="shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F7941E] focus-visible:ring-offset-2 rounded-md"
+                aria-label="Ir para a página inicial da Go Tracker"
+              >
+                <img
+                  src="/assets/img/logo.png"
+                  alt="Go Tracker - Rastreamento Veicular"
+                  className="h-14 w-auto sm:h-16 md:h-24"
+                />
+              </Link>
           </div>
 
           <p className="mb-8 text-sm leading-relaxed text-zinc-500">

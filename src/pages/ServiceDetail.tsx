@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Check, MapPin, BarChart3, TrendingUp, Shield, Zap, Clock, Navigation, Users, Activity } from 'lucide-react';
-import { ContactForm } from '../components/ContactForm';
+import { ContactForm } from '../components/shared/ContactForm';
 
 const serviceData: Record<string, any> = {
   'rastreamento-frotas': {
@@ -86,7 +86,7 @@ export const ServiceDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-zinc-100">
         <div className="text-center">
-          <h1 className="text-4xl font-black text-[#2B3990] mb-4">Serviço não encontrado</h1>
+          <h1 className="text-4xl font-black text-[#1e3a8a] mb-4">Serviço não encontrado</h1>
           <Link to="/" className="text-[#F7941E] font-bold hover:underline">Voltar para a Home</Link>
         </div>
       </div>
@@ -96,7 +96,7 @@ export const ServiceDetail = () => {
   return (
     <div className="pt-20">
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#2B3990] to-[#8DC63F] py-16">
+      <div className="bg-gradient-to-r from-[#1e3a8a] to-[#8DC63F] py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-black text-white uppercase tracking-tight">
             {data.title}
@@ -113,10 +113,10 @@ export const ServiceDetail = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-black text-[#2B3990] mb-8 leading-tight">
+              <h2 className="text-3xl font-black text-[#1e3a8a] mb-8 leading-tight">
                 {data.heroTitle.split(' ').map((word, i) => (
-                  <span key={i} className={word === 'Controle' || word === 'Total' || word === 'solução' || word === 'frota' ? 'text-[#2B3990]' : ''}>
-                    {word === 'Controle' || word === 'Total' || word === 'solução' || word === 'frota' ? <strong className="text-[#2B3990]">{word} </strong> : word + ' '}
+                  <span key={i} className={word === 'Controle' || word === 'Total' || word === 'solução' || word === 'frota' ? 'text-[#1e3a8a]' : ''}>
+                    {word === 'Controle' || word === 'Total' || word === 'solução' || word === 'frota' ? <strong className="text-[#1e3a8a]">{word} </strong> : word + ' '}
                   </span>
                 ))}
               </h2>
@@ -130,7 +130,7 @@ export const ServiceDetail = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute -inset-4 border-2 border-[#2B3990] rounded-[2rem] -z-10"></div>
+              <div className="absolute -inset-4 border-2 border-[#1e3a8a] rounded-[2rem] -z-10"></div>
               <img 
                 src={data.heroImage} 
                 alt={data.title}
@@ -153,10 +153,10 @@ export const ServiceDetail = () => {
             referrerPolicy="no-referrer"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#2B3990]/10 to-[#8DC63F]/10 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/10 to-[#8DC63F]/10 z-0"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-black text-[#2B3990] text-center mb-16 uppercase">
+          <h2 className="text-4xl font-black text-[#1e3a8a] text-center mb-16 uppercase">
             Benefícios do Rastreio Online
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -195,7 +195,7 @@ export const ServiceDetail = () => {
               viewport={{ once: true }}
               className="relative order-2 lg:order-1"
             >
-              <div className="absolute -inset-4 border-2 border-[#2B3990] rounded-[2rem] -z-10"></div>
+              <div className="absolute -inset-4 border-2 border-[#1e3a8a] rounded-[2rem] -z-10"></div>
               <img 
                 src={data.complementaryImage} 
                 alt="Complementary Solutions"
@@ -209,7 +209,7 @@ export const ServiceDetail = () => {
               viewport={{ once: true }}
               className="order-1 lg:order-2"
             >
-              <h2 className="text-4xl font-black text-[#2B3990] mb-8 uppercase">Soluções Complementares</h2>
+              <h2 className="text-4xl font-black text-[#1e3a8a] mb-8 uppercase">Soluções Complementares</h2>
               <p className="text-zinc-600 mb-8 text-lg">
                 Além da Gestão de Frotas você terá acesso a mais de 15 soluções para aumentar a economia e eficiência de seu negócio.
               </p>

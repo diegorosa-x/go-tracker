@@ -1,33 +1,34 @@
-import React from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
+import React from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { SectionHeader } from "../shared/SectionHeader ";
 
 const testimonials = [
   {
-    name: 'Marcio Santana',
-    text: 'A GoTracker tem sido uma excelente parceira para a minha empresa de transporte. Com o rastreamento de frotas, consigo monitorar o comportamento dos motoristas.',
-    role: 'Empresário',
+    name: "Marcio Santana",
+    text: "A GoTracker tem sido uma excelente parceira para a minha empresa de transporte. Com o rastreamento de frotas, consigo monitorar o comportamento dos motoristas.",
+    role: "Empresário",
   },
   {
-    name: 'Sebastião Oliveira',
-    text: 'Estou impressionado com o nível de suporte que a GoTracker oferece aos seus clientes. Sempre que tenho alguma dúvida ou problema, a equipe está pronta para me ajudar.',
-    role: 'Gestor de logística',
+    name: "Sebastião Oliveira",
+    text: "Estou impressionado com o nível de suporte que a GoTracker oferece aos seus clientes. Sempre que tenho alguma dúvida ou problema, a equipe está pronta para me ajudar.",
+    role: "Gestor de logística",
   },
   {
-    name: 'Coutinho Telecom',
-    text: 'A GoTracker tem sido uma ótima solução para a manutenção preventiva dos meus veículos. Com o monitoramento do desempenho, consigo evitar interrupções.',
-    role: 'Diretor de operações',
+    name: "Coutinho Telecom",
+    text: "A GoTracker tem sido uma ótima solução para a manutenção preventiva dos meus veículos. Com o monitoramento do desempenho, consigo evitar interrupções.",
+    role: "Diretor de operações",
   },
   {
-    name: 'Ricardo Mendes',
-    text: 'O sistema de bloqueio remoto nos deu uma tranquilidade que não tínhamos antes. A tecnologia da GoTracker é realmente de ponta.',
-    role: 'Proprietário de frota',
+    name: "Ricardo Mendes",
+    text: "O sistema de bloqueio remoto nos deu uma tranquilidade que não tínhamos antes. A tecnologia da GoTracker é realmente de ponta.",
+    role: "Proprietário de frota",
   },
   {
-    name: 'Ana Paula',
-    text: 'A telemetria avançada nos ajudou a reduzir o consumo de combustível em 15% no primeiro trimestre. Excelente investimento.',
-    role: 'Gerente operacional',
+    name: "Ana Paula",
+    text: "A telemetria avançada nos ajudou a reduzir o consumo de combustível em 15% no primeiro trimestre. Excelente investimento.",
+    role: "Gerente operacional",
   },
 ];
 
@@ -35,14 +36,14 @@ export const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
-      align: 'start',
+      align: "start",
       slidesToScroll: 1,
       breakpoints: {
-        '(min-width: 768px)': { slidesToScroll: 2 },
-        '(min-width: 1024px)': { slidesToScroll: 3 },
+        "(min-width: 768px)": { slidesToScroll: 2 },
+        "(min-width: 1024px)": { slidesToScroll: 3 },
       },
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    [Autoplay({ delay: 4000, stopOnInteraction: false })],
   );
 
   const scrollPrev = React.useCallback(() => {
@@ -60,20 +61,23 @@ export const Testimonials = () => {
       className="relative overflow-hidden bg-slate-50 px-4 py-24"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="mb-16 text-center">
-          <h2
-            id="testimonials-title"
-            className="mb-4 text-4xl font-black text-gotracker-blue"
-          >
-            Depoimentos de clientes
-          </h2>
-
-          <p className="mx-auto max-w-4xl font-medium leading-relaxed text-slate-600">
-            Veja como nossas soluções de rastreamento veicular, telemetria e gestão
-            de frotas ajudam empresas a ganhar mais controle, segurança e eficiência
-            operacional em diferentes segmentos.
-          </p>
-        </header>
+        <SectionHeader
+          align="center"
+          theme="light"
+          size="md"
+          title={
+            <>
+              Depoimentos
+              <span className="text-[#F7941E]">
+                <br></br>de clientes
+              </span>
+            </>
+          }
+          descriptionColor="text-white/80"
+          description=" Veja como nossas soluções de rastreamento veicular, telemetria e
+            gestão de frotas ajudam empresas a ganhar mais controle, segurança e
+            eficiência operacional em diferentes segmentos."
+        />
 
         <div
           className="relative"

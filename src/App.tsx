@@ -8,10 +8,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { TopBar } from './components/layout/TopBar';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
-import { WhatsAppFloat } from './components/layout/WhatsAppFloat';
-import { ScrollToTop } from './components/layout/ScrollToTop';
+import { WhatsAppFloat } from './components/ui/WhatsAppFloat';
 import { Home } from './pages/Home';
 import { ServiceDetail } from './pages/ServiceDetail';
+import { BackTopButton } from './components/ui/BackToButton';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,10 +25,10 @@ export default function App() {
 
   return (
     <Router>
-      <ScrollToTop />
+      <BackTopButton />
       <div className="min-h-screen bg-zinc-100 font-sans text-zinc-900 selection:bg-[#F7941E]/30 relative">
         {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#2B3990 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1e3a8a 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         
         <TopBar />
         

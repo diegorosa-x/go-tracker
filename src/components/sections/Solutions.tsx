@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { SectionHeader } from "../shared/SectionHeader ";
 
 const solutions = [
   {
@@ -52,21 +53,16 @@ export const Solutions = () => {
       className="relative z-10 bg-zinc-100 py-24"
     >
       <div className="mx-auto max-w-7xl px-4">
-        <header className="mb-16 text-center">
-          <h2
-            id="solutions-title"
-            className="mb-4 text-4xl font-black text-[#2B3990]"
-          >
-            Nossas soluções
-          </h2>
-
-          <p className="mx-auto max-w-3xl text-zinc-700">
-            Conheça nossas soluções para rastreamento veicular, telemetria, IOT
+        <SectionHeader
+          theme="light"
+          align="center"
+          size="md"
+          title={<>Nossas soluções </>}
+          description="  Conheça nossas soluções para rastreamento veicular, telemetria, IOT
             e otimização de frotas para pequenas e grandes empresas, com
             equipamento homologado pela Anatel e sistema exclusivo de
-            monitoramento.
-          </p>
-        </header>
+            monitoramento."
+        />
 
         <ul className="grid gap-8 md:grid-cols-2" role="list">
           {solutions.map(({ title, desc, icon: Icon, img, slug, imageAlt }) => (
@@ -85,7 +81,7 @@ export const Solutions = () => {
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
-                <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-[#7d86c5]/90 to-[#2B3990]/40 p-8">
+                <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-[#30355a]/90 to-[#1a225e]/40 p-8">
                   <div className="mb-4">
                     <Icon
                       size={32}
@@ -110,7 +106,7 @@ export const Solutions = () => {
                     <Link
                       to={`/servicos/${slug}`}
                       aria-label={`Saiba mais sobre ${title}`}
-                      className="inline-flex items-center gap-1 text-sm font-bold text-[#F7941E] transition-all hover:gap-2 focus:outline-none focus:ring-2 focus:ring-[#F7941E] focus:ring-offset-2 focus:ring-offset-[#2B3990]"
+                      className="inline-flex items-center gap-1 text-sm font-bold text-[#F7941E] transition-all hover:gap-2 focus:outline-none focus:ring-2 focus:ring-[#F7941E] focus:ring-offset-2 focus:ring-offset-[#1e3a8a]"
                     >
                       Saiba mais
                       <ChevronRight

@@ -48,7 +48,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contato" className="py-24 bg-[#2B3990] relative overflow-hidden">
+    <section id="contato" className="py-24 bg-[#1e3a8a] relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img 

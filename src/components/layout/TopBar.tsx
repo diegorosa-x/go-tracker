@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Phone, Facebook, Instagram } from 'lucide-react';
 
 export const TopBar = () => (
-  <div className="bg-[#2B3990] text-white py-2 px-4 hidden md:block relative z-10">
+  <div className="bg-[#1e3a8a] text-white py-2 px-4 hidden md:block relative z-10">
     <div className="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium">
       <div className="flex gap-6">
         <a href="mailto:contato@gotracker.com.br" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
