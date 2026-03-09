@@ -22,7 +22,7 @@ const slides = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&q=80&w=1920",
+      "https://aiko.digital/wp-content/uploads/2023/12/73330066-21ba-4e6c-b283-153c576835e1.jpg",
     title: "Telemetria Avançada",
     subtitle: "Reduza custos e aumente a vida útil dos seus veículos.",
     link: "/servicos/telemetria-avancada",

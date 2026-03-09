@@ -94,7 +94,7 @@ export const LightFleets = () => {
               {/* Main Visual: High-Tech Car Image */}
               <div className="relative rounded-[4rem] overflow-hidden border-8 border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.8)]">
                 <img 
-                  src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1200" 
+                  src="https://www.webmotors.com.br/wp-content/uploads/2020/03/26172016/Fiat-Argo-Trekking-1-7.jpeg" 
                   alt="Fiat Argo Branco" 
                   className="w-full aspect-[4/3] object-cover opacity-80"
                   referrerPolicy="no-referrer"

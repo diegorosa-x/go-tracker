@@ -1,74 +1,130 @@
-import React from 'react';
-import { Truck, ShieldCheck, Zap, Navigation, ChevronRight } from 'lucide-react';
-import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import {
+  Truck,
+  ShieldCheck,
+  Zap,
+  Navigation,
+  ChevronRight,
+} from "lucide-react";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
+
+const solutions = [
+  {
+    title: "Rastreamento para frotas",
+    desc: "Monitore a localização dos veículos em tempo real, aumente a segurança da operação e responda rapidamente a emergências ou desvios de rota.",
+    icon: Truck,
+    img: "https://tecnoraster.com.br/wp-content/uploads/2023/10/rasterador-gps-5-maneiras-como-ele-ajuda-na-sua-frota.jpg",
+    slug: "rastreamento-frotas",
+    imageAlt: "Caminhões e veículos de frota em operação logística",
+  },
+  {
+    title: "Gestão de frotas",
+    desc: "Centralize o gerenciamento da frota com controle de manutenção, abastecimento, desempenho operacional e redução de custos.",
+    icon: ShieldCheck,
+    img: "https://thumbs.dreamstime.com/b/frota-dos-carros-137538374.jpg?w=992",
+    slug: "gestao-frotas",
+    imageAlt: "Profissional analisando indicadores de gestão de frota",
+  },
+  {
+    title: "Telemetria avançada",
+    desc: "Acompanhe consumo de combustível, velocidade, comportamento do condutor e desempenho dos veículos com dados detalhados.",
+    icon: Zap,
+    img: "https://aiko.digital/wp-content/uploads/2023/12/73330066-21ba-4e6c-b283-153c576835e1.jpg",
+    slug: "telemetria-avancada",
+    imageAlt: "Painel com dados e indicadores de telemetria veicular",
+  },
+  {
+    title: "Otimização de rotas",
+    desc: "Planeje rotas mais eficientes para reduzir tempo de deslocamento, melhorar entregas e aumentar a produtividade da operação.",
+    icon: Navigation,
+    img: "https://estruturei.com.br/wp-content/uploads/2023/07/O-que-e-Otimizacao-de-Rotas-e-Como-Funciona-Atualizado-2023.jpg",
+    slug: "otimizacao-rotas",
+    imageAlt: "Mapa com planejamento e otimização de rotas logísticas",
+  },
+];
 
 export const Solutions = () => {
-  const solutions = [
-    {
-      title: "RASTREAMENTO PARA FROTAS",
-      desc: "Monitore a localização de seus veículos em tempo real e responda rapidamente a emergências ou problemas.",
-      icon: <Truck className="text-[#F7941E]" size={32} />,
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
-      slug: "rastreamento-frotas"
-    },
-    {
-      title: "GESTÃO DE FROTAS",
-      desc: "Gerenciamento completo dos veículos de uma empresa, incluindo manutenção, reparos e combustível.",
-      icon: <ShieldCheck className="text-[#F7941E]" size={32} />,
-      img: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&q=80&w=800",
-      slug: "gestao-frotas"
-    },
-    {
-      title: "TELEMETRIA AVANÇADA",
-      desc: "Colete informações detalhadas sobre o desempenho de seus veículos, consumo de combustível e velocidade.",
-      icon: <Zap className="text-[#F7941E]" size={32} />,
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-      slug: "telemetria-avancada"
-    },
-    {
-      title: "OTIMIZAÇÃO DE ROTAS",
-      desc: "Crie rotas personalizadas para seus motoristas com base nas necessidades específicas da sua empresa.",
-      icon: <Navigation className="text-[#F7941E]" size={32} />,
-      img: "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800",
-      slug: "otimizacao-rotas"
-    }
-  ];
-
   return (
-    <section id="servicos" className="py-24 bg-zinc-100 relative z-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-black text-[#2B3990] mb-4">Nossas Soluções</h2>
-          <p className="text-zinc-600 max-w-3xl mx-auto">
-            Rastreamento, telemetria veicular e IOT para pequenas e grandes empresas, com aparelho homologado pela Anatel e sistema de rastreio exclusivo.
-          </p>
-        </div>
+    <section
+      id="servicos"
+      aria-labelledby="solutions-title"
+      className="relative z-10 bg-zinc-100 py-24"
+    >
+      <div className="mx-auto max-w-7xl px-4">
+        <header className="mb-16 text-center">
+          <h2
+            id="solutions-title"
+            className="mb-4 text-4xl font-black text-[#2B3990]"
+          >
+            Nossas soluções
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {solutions.map((sol, i) => (
-            <motion.div 
-              key={i}
-              whileHover={{ y: -10 }}
-              className="relative group h-[250px] rounded-2xl overflow-hidden shadow-lg"
-            >
-              <img 
-                src={sol.img} 
-                alt={sol.title} 
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2B3990]/90 to-[#2B3990]/40 p-8 flex flex-col justify-center">
-                <div className="mb-4">{sol.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{sol.title}</h3>
-                <p className="text-white/80 text-sm mb-4 line-clamp-2">{sol.desc}</p>
-                <Link to={`/servicos/${sol.slug}`} className="text-[#F7941E] font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  SAIBA MAIS <ChevronRight size={16} />
-                </Link>
-              </div>
-            </motion.div>
+          <p className="mx-auto max-w-3xl text-zinc-700">
+            Conheça nossas soluções para rastreamento veicular, telemetria, IOT
+            e otimização de frotas para pequenas e grandes empresas, com
+            equipamento homologado pela Anatel e sistema exclusivo de
+            monitoramento.
+          </p>
+        </header>
+
+        <ul className="grid gap-8 md:grid-cols-2" role="list">
+          {solutions.map(({ title, desc, icon: Icon, img, slug, imageAlt }) => (
+            <li key={slug} className="list-none">
+              <motion.article
+                whileHover={{ y: -10 }}
+                className="group relative h-[250px] overflow-hidden rounded-2xl shadow-lg"
+                aria-labelledby={`solution-${slug}-title`}
+              >
+                <img
+                  src={img}
+                  alt={imageAlt}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+
+                <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-[#7d86c5]/90 to-[#2B3990]/40 p-8">
+                  <div className="mb-4">
+                    <Icon
+                      size={32}
+                      className="text-[#F7941E]"
+                      aria-hidden="true"
+                      focusable="false"
+                    />
+                  </div>
+
+                  <h3
+                    id={`solution-${slug}-title`}
+                    className="mb-2 text-xl font-bold text-white"
+                  >
+                    {title}
+                  </h3>
+
+                  <p className="mb-4 line-clamp-3 text-sm text-white/90">
+                    {desc}
+                  </p>
+
+                  <div>
+                    <Link
+                      to={`/servicos/${slug}`}
+                      aria-label={`Saiba mais sobre ${title}`}
+                      className="inline-flex items-center gap-1 text-sm font-bold text-[#F7941E] transition-all hover:gap-2 focus:outline-none focus:ring-2 focus:ring-[#F7941E] focus:ring-offset-2 focus:ring-offset-[#2B3990]"
+                    >
+                      Saiba mais
+                      <ChevronRight
+                        size={16}
+                        aria-hidden="true"
+                        focusable="false"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
